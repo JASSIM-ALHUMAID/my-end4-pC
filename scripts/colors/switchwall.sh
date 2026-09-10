@@ -8,8 +8,8 @@ CONFIG_DIR="$XDG_CONFIG_HOME/quickshell/$QUICKSHELL_CONFIG_NAME"
 CACHE_DIR="$XDG_CACHE_HOME/quickshell"
 STATE_DIR="$XDG_STATE_HOME/quickshell"
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-SHELL_CONFIG_FILE="$XDG_CONFIG_HOME/illogical-impulse/config.json"
-MATUGEN_DIR="$XDG_CONFIG_HOME/matugen"
+SHELL_CONFIG_FILE="$XDG_CONFIG_HOME/illogical-impulse-pC/config.json"
+MATUGEN_DIR="$XDG_CONFIG_HOME/matugen-end4pc"
 terminalscheme="$SCRIPT_DIR/terminal/scheme-base.json"
 
 handle_kde_material_you_colors() {
@@ -29,7 +29,7 @@ handle_kde_material_you_colors() {
             kde_scheme_variant="scheme-tonal-spot"
             ;;
     esac
-    "$XDG_CONFIG_HOME"/matugen/templates/kde/kde-material-you-colors-wrapper.sh --scheme-variant "$kde_scheme_variant"
+    "$XDG_CONFIG_HOME"/matugen-end4pc/templates/kde/kde-material-you-colors-wrapper.sh --scheme-variant "$kde_scheme_variant"
 }
 
 pre_process() {
@@ -328,7 +328,7 @@ switch() {
         done
     fi
 
-    matugen "${matugen_args[@]}"
+    matugen -c "$MATUGEN_DIR/config.toml" "${matugen_args[@]}"
 
     if [[ -n "$colors_lock_flag" ]]; then
         if [[ -f "$colors_json_path" ]]; then

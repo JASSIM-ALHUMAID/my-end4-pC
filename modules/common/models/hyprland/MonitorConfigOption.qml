@@ -46,7 +46,7 @@ NestableObject {
 
         const escaped = lines.replace(/'/g, "'\\''")
         saveProc.command = ["bash", "-c",
-            `printf '%s\n' '${escaped}' > ~/.config/hypr/monitors.lua`]
+            `printf '%s\n' '${escaped}' > ~/.config/hypr/shells/end4pc/monitors.lua`]
         saveProc.running = true
     }
 

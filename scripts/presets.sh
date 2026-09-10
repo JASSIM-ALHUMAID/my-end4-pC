@@ -7,7 +7,7 @@
 #   presets.sh --export-zip <name>
 #   presets.sh --import-zip <zip_path>
 
-CONFIG_DIR="$HOME/.config/illogical-impulse"
+CONFIG_DIR="$HOME/.config/illogical-impulse-pC"
 CONFIG_FILE="$CONFIG_DIR/config.json"
 LOCAL_PRESETS_DIR="$CONFIG_DIR/presets"
 ONLINE_PRESETS_DIR="$HOME/.cache/quickshell/presets"

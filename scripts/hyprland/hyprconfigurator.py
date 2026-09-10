@@ -168,11 +168,11 @@ def save_preset(anim_file, preset_name):
 
 if __name__ == "__main__":
     p = argparse.ArgumentParser()
-    p.add_argument("--file", default="~/.config/hypr/hyprland/shellOverrides/main.lua")
+    p.add_argument("--file", default="~/.config/hypr/shells/end4pc/overrides/main.lua")
     p.add_argument("--set", nargs=2, action="append", metavar=("KEY", "VALUE"))
     p.add_argument("--reset", action="append", metavar="KEY")
     p.add_argument("--anim-preset", metavar="PRESET")
-    p.add_argument("--anim-file", default="~/.config/hypr/hyprland/shellOverrides/animations.lua")
+    p.add_argument("--anim-file", default="~/.config/hypr/shells/end4pc/overrides/animations.lua")
     args = p.parse_args()
 
     if args.anim_preset:
